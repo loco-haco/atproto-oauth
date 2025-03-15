@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { configureOAuth, resolveFromIdentity, createAuthorizationUrl, OAuthUserAgent, finalizeAuthorization, getSession } from '@atcute/oauth-browser-client';
 import { XRPC } from '@atcute/client';
 
-const APP_URL = "https://atproto-oauth-rjpayl9ng-loco-hacos-projects.vercel.app";
+const APP_URL = "process.env.NEXT_PUBLIC_URL";
 
 // Export login function without immediately assigning to window
 export async function login() {
