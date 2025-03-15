@@ -5,6 +5,8 @@ import {
 } from '@atproto/oauth-client-browser'
 
 
+export function createBlueskyClient(): Promise<OAuthClientMetadataInput> {return Promise.resolve(blueskyClientMetadata())}
+
 export function blueskyClientMetadata(): OAuthClientMetadataInput {
   const baseUrl: string = process.env.NEXT_PUBLIC_URL as string
 

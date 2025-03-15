@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@atcute/oauth-browser-client": "^1.0.15",
+    "@atproto-labs/handle-resolver": "^0.1.7",
     "@atproto/oauth-client-browser": "^0.3.11",
+    "iron-session": "^8.0.4",
     "next": "15.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
