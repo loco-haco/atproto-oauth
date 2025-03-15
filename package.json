@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@atcute/client": "^2.0.8",
     "@atcute/oauth-browser-client": "^1.0.15",
     "@atproto-labs/handle-resolver": "^0.1.7",
     "@atproto/oauth-client-browser": "^0.3.11",

@@ -1,16 +1,16 @@
-'use client'
+/*'use client'
 import { useEffect } from "react";
 import { configureOAuth, resolveFromIdentity, createAuthorizationUrl, OAuthUserAgent, finalizeAuthorization, getSession } from '@atcute/oauth-browser-client';
 import { XRPC } from '@atcute/client';
 
-const APP_URL = `${process.env.NEXT_PUBLIC_URL}`;
+const baseUrl = `${process.env.NEXT_PUBLIC_URL}`;
 
 export default function OAuthComponent() {
   useEffect(() => {
     configureOAuth({
       metadata: {
-        client_id: `${APP_URL}/client-metadata.json`,
-        redirect_uri: `https://atproto-oauth.vercel.app/`,
+        client_id: `${baseUrl}/client-metadata.json`,
+            redirect_uri: [`${baseUrl}`]
       }
     });
 
@@ -36,7 +36,7 @@ export async function login() {
   const authUrl = await createAuthorizationUrl({
     metadata: metadata,
     identity: identity,
-    scope: 'atproto transition:generic',
+    scope: 'atproto transition:generic transition:chat.bsky',
   });
   window.location.assign(authUrl);
   await sleep(200);
@@ -103,4 +103,4 @@ function sleep(ms) {
 }
 
 // Make login available globally
-window.login = login;
+window.login = login;*/

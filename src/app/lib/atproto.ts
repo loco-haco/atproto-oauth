@@ -11,6 +11,12 @@ export function blueskyClientMetadata(): OAuthClientMetadataInput {
   const baseUrl: string = process.env.NEXT_PUBLIC_URL as string
 
   return {
+            client_id: `${baseUrl}/client-metadata.json`,
+            redirect_uris: [`${baseUrl}`]
+          }
+        };
+
+    /*    
     client_name: 'atproto oAuth template',
     client_id: `${baseUrl}/client-metadata.json`,
     client_uri: `${baseUrl}`,
@@ -23,8 +29,6 @@ export function blueskyClientMetadata(): OAuthClientMetadataInput {
     application_type: 'web',
     token_endpoint_auth_method: 'none',
     dpop_bound_access_tokens: true,
-  }
-}
-
+    */
 
 
