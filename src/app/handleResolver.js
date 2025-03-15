@@ -3,14 +3,14 @@ import { useEffect } from "react";
 import { configureOAuth, resolveFromIdentity, createAuthorizationUrl, OAuthUserAgent, finalizeAuthorization, getSession } from '@atcute/oauth-browser-client';
 import { XRPC } from '@atcute/client';
 
-const APP_URL = "https://atproto-oauth-rjpayl9ng-loco-hacos-projects.vercel.app";
+const APP_URL = `${process.env.NEXT_PUBLIC_URL}`;
 
 export default function OAuthComponent() {
   useEffect(() => {
     configureOAuth({
       metadata: {
         client_id: `${APP_URL}/client-metadata.json`,
-        redirect_uri: `${APP_URL}`,
+        redirect_uri: `https://atproto-oauth.vercel.app/`,
       }
     });
 
@@ -36,7 +36,7 @@ export async function login() {
   const authUrl = await createAuthorizationUrl({
     metadata: metadata,
     identity: identity,
-    scope: 'atproto transition:generic transition:chat.bsky',
+    scope: 'atproto transition:generic',
   });
   window.location.assign(authUrl);
   await sleep(200);
