@@ -14,7 +14,7 @@ export function blueskyClientMetadata(): OAuthClientMetadataInput {
     client_name: 'atproto oAuth template',
     client_id: `${baseUrl}/client-metadata.json`,
     client_uri: `${baseUrl}`,
-    redirect_uris: [`${baseUrl}/oauth/callback`],
+    redirect_uris: [`${baseUrl}`],
     policy_uri: `${baseUrl}`,
     tos_uri: `${baseUrl}`,
     scope: 'atproto transition:generic',
